@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Zen+Dots&display=swap');
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.uneGrandeBoite {
+    display: flex;
+}
+
+.petiteBoite {
+    flex: 1;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    transition: flex 2s;
+}
+
+.petiteBoite:hover {
+    flex: 5;
+}
+
+.mer {
+    background-image: url('images/paysage1.jpg');
+}
+
+.etoiles {
+    background-image: url('images/paysage2.jpg');
+}
+
+.prairie {
+    background-image: url('images/paysage3.jpg');
+}
+
+.ville {
+    background-image: url('images/paysage4.jpg');
+}
+
+.montagne {
+    background-image: url('images/paysage5.jpg');
+}
+
+p {
+    color: gold;
+    font-weight: bolder;
+    text-transform: uppercase;
+    font-size: 5.2em;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    transition: transform 2s;
+}
+
+.ho {
+    transform: translateY(-500%);
+    opacity: 0%;
+}
+
+.petiteBoite:hover>.ho {
+    transform: translateY(0%);
+    opacity: 100%;
+}
+
+.ba {
+    transform: translateY(500%);
+    opacity: 0%;
+}
+
+.petiteBoite:hover>.ba {
+    transform: translateY(0%);
+    opacity: 100%;
+}
+
+.ro {
+    background-color: rgba(0, 0, 0, 0.555);
+    height: 100px;
+    width: 200px;
+    border-radius: 150%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-style: solid;
+    background-image: linear-gradient(rgba(255, 255, 255, 0.753), rgba(0, 0, 0, 0.931));
+    -webkit-box-shadow: 2px 15px 5px rgba(255, 217, 0, 0.616);
+    border: outset rgba(0, 0, 0, 0.829);
+    padding: 40px 40px;
+    transition: height .2s, width .2s, opacity .2s;
+}
+
+.ro>p {
+    color: gold;
+}
+
+.ro:hover {
+    cursor: pointer;
+    background-image: linear-gradient(rgba(255, 255, 255, 0.753), rgba(0, 0, 0, 0.931));
+    background-color: gold
+    
+    
+}
+
+.ro:hover>p {
+    color:red;
+}
+
+
+/*--------VERSION MOBILE----------*/
+
+
+/* Media Query */
+
+                                /*breakpoint*/
+@media only screen and (max-width: 920px) {
+    .uneGrandeBoite {
+        display: block;
+    }
+    .petiteBoite {
+        flex: none;
+        height: 30vh;
+        overflow: hidden;
+        transition : height 2s;
+    }
+    .petiteBoite:hover {
+        height: 90vh;
+    }
+    .ho {
+        transform: translateX(-500%);
+    }
+    .petiteBoite:hover>.ho {
+        transform: translateX(0%);
+    }
+    .ba {
+        transform: translateX(500%);
+    }
+    .petiteBoite:hover>.ba {
+        transform: translateX(0%);
+    }
+    .ro {
+        height: 110px;
+        width: 110px;
+        background-image: linear-gradient(rgba(255, 255, 255, 0.383), rgba(0, 0, 0, 0.886));
+        border: black 1px;
+        border-style: inset;
+        box-shadow: 38px 54px 4px 14px rgba(15, 12, 12, 0.45);
+        -webkit-box-shadow: 38px 54px 4px 14px rgba(15, 10, 10, 0.45);
+        -moz-box-shadow: 38px 54px 4px 14px rgba(12, 7, 7, 0.45);
+    }
+    .ro:hover {
+        background-image: linear-gradient(rgba(255, 255, 255, 0.753), rgba(0, 0, 0, 0.931));
+    }
+}
